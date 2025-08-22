@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TechNet Solutions - Soluções em TI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/index.js"></script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-xl">T</span>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-800">TechNet Solutions</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a class="nav-link active text-gray-700 hover:text-blue-600 transition duration-300" href="#"
+                        onclick="showPage('home')">Início</a>
+                    <a class="nav-link text-gray-700 hover:text-blue-600 transition duration-300" href="#"
+                        onclick="showPage('services')">Serviços</a>
+                    <a class="nav-link text-gray-700 hover:text-blue-600 transition duration-300" href="#"
+                        onclick="showPage('about')">Sobre Nós</a>
+                    <a class="nav-link text-gray-700 hover:text-blue-600 transition duration-300" href="#"
+                        onclick="showPage('contact')">Contato</a>
+                    <a class="nav-link text-gray-700 hover:text-blue-600 transition duration-300" href="#"
+                        onclick="showPage('testimonials')">Testemunhos</a>
+                    <a class="nav-link text-gray-700 hover:text-blue-600 transition duration-300" href="#"
+                        onclick="showPage('faq')">FAQ</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700" onclick="toggleMobileMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden md:hidden pb-4" id="mobile-menu">
+                <a class="block py-2 text-gray-700 hover:text-blue-600" href="#" onclick="showPage('home')">Início</a>
+                <a class="block py-2 text-gray-700 hover:text-blue-600" href="#"
+                    onclick="showPage('services')">Serviços</a>
+                <a class="block py-2 text-gray-700 hover:text-blue-600" href="#" onclick="showPage('about')">Sobre
+                    Nós</a>
+                <a class="block py-2 text-gray-700 hover:text-blue-600" href="#"
+                    onclick="showPage('contact')">Contato</a>
+                <a class="block py-2 text-gray-700 hover:text-blue-600" href="#"
+                    onclick="showPage('testimonials')">Testemunhos</a>
+                <a class="block py-2 text-gray-700 hover:text-blue-600" href="#" onclick="showPage('faq')">FAQ</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Home Page -->
+    <div class="active-page" id="home-page">
+        <section class="gradient-bg text-white pt-24 pb-20">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-10 lg:mb-0">
+                        <h1 class="text-5xl font-bold mb-6 fade-in">Soluções Completas em TI</h1>
+                        <p class="text-xl mb-8 fade-in">Transforme sua infraestrutura tecnológica com nossos serviços
+                            especializados em redes, segurança e suporte técnico.</p>
+                        <button
+                            class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 fade-in"
+                            onclick="showPage('services')">
+                            Descubra como otimizar sua rede hoje!
+                        </button>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                            <svg class="w-full h-64" fill="none" viewbox="0 0 400 300">
+                                <rect fill="#f3f4f6" height="150" rx="8" stroke="#d1d5db" stroke-width="2" width="300"
+                                    x="50" y="100"></rect>
+                                <rect fill="#3b82f6" height="40" rx="4" width="60" x="70" y="120"></rect>
+                                <rect fill="#10b981" height="40" rx="4" width="60" x="150" y="120"></rect>
+                                <rect fill="#f59e0b" height="40" rx="4" width="60" x="230" y="120"></rect>
+                                <rect fill="#ef4444" height="40" rx="4" width="20" x="310" y="120"></rect>
+                                <path d="M100 160 L100 200 L180 200 L180 160" fill="none" stroke="#6b7280"
+                                    stroke-width="3"></path>
+                                <path d="M180 160 L180 200 L260 200 L260 160" fill="none" stroke="#6b7280"
+                                    stroke-width="3"></path>
+                                <circle cx="190" cy="200" fill="#3b82f6" r="8"></circle>
+                                <text fill="white" font-size="16" font-weight="bold" x="200" y="90">Escritório
+                                    Moderno</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Nossos Principais Serviços</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Configuração de Redes</h3>
+                        <p class="text-gray-600">Instalação e configuração completa de infraestrutura de rede</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Segurança Digital</h3>
+                        <p class="text-gray-600">Proteção avançada contra ameaças e vulnerabilidades</p>
+                    </div>
+                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition duration-300">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Suporte 24/7</h3>
+                        <p class="text-gray-600">Atendimento técnico especializado a qualquer hora</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Pagina de serviços -->
+    <div class="hidden-page pt-24" id="services-page">
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-4">Nossos Serviços</h1>
+                <p class="text-xl text-center text-gray-600 mb-16">Soluções completas em tecnologia da informação</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Instalação de Roteadores</h3>
+                        <p class="text-gray-600 mb-4">Configuração profissional de roteadores empresariais e
+                            residenciais com otimização de performance.</p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li>• Configuração de Wi-Fi seguro</li>
+                            <li>• Otimização de velocidade</li>
+                            <li>• Configuração de portas</li>
+                        </ul>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Configuração de Rede</h3>
+                        <p class="text-gray-600 mb-4">Estruturação completa de redes locais com cabeamento estruturado e
+                            switches gerenciáveis.</p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li>• Cabeamento estruturado</li>
+                            <li>• Configuração de VLANs</li>
+                            <li>• Monitoramento de rede</li>
+                        </ul>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Segurança Digital</h3>
+                        <p class="text-gray-600 mb-4">Implementação de soluções de segurança avançadas para proteção de
+                            dados e sistemas.</p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li>• Firewall empresarial</li>
+                            <li>• Antivírus corporativo</li>
+                            <li>• Backup automático</li>
+                        </ul>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-red-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Suporte Técnico</h3>
+                        <p class="text-gray-600 mb-4">Atendimento especializado 24/7 para resolução rápida de problemas
+                            técnicos.</p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li>• Suporte remoto</li>
+                            <li>• Atendimento presencial</li>
+                            <li>• Manutenção preventiva</li>
+                        </ul>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-yellow-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Servidores</h3>
+                        <p class="text-gray-600 mb-4">Instalação e configuração de servidores para empresas de todos os
+                            portes.</p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li>• Servidores Windows/Linux</li>
+                            <li>• Virtualização</li>
+                            <li>• Cloud Computing</li>
+                        </ul>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-indigo-600" fill="currentColor" viewbox="0 0 20 20">
+                                <path
+                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Desenvolvimento</h3>
+                        <p class="text-gray-600 mb-4">Criação de sistemas personalizados e sites corporativos sob
+                            medida.</p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li>• Sites corporativos</li>
+                            <li>• Sistemas web</li>
+                            <li>• E-commerce</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Página Sobre Nós -->
+    <div class="hidden-page pt-24" id="about-page">
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-16">Sobre Nós</h1>
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Nossa História</h2>
+                        <p class="text-gray-600 mb-6">
+                            Fundada em 2025, a TechNet Solutions nasceu da paixão por tecnologia e do desejo de ajudar
+                            empresas a maximizar seu potencial através de soluções inovadoras em TI.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Mesmo sendo uma empresa nova, já atendemos centenas de clientes, desde
+                            pequenas empresas até grandes corporações, sempre com foco na excelência e satisfação do
+                            cliente.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <div class="text-3xl font-bold text-blue-600">100+</div>
+                                <div class="text-sm text-gray-600">Clientes Atendidos</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-purple-600">24/7</div>
+                                <div class="text-sm text-gray-600">Suporte Disponível</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-2xl p-8">
+                        <svg class="w-full h-64" fill="none" viewbox="0 0 400 300">
+                            <!-- Team collaboration illustration -->
+                            <rect fill="#f9fafb" height="200" rx="12" stroke="#e5e7eb" stroke-width="2" width="300"
+                                x="50" y="50"></rect>
+                            <circle cx="120" cy="120" fill="#3b82f6" r="25"></circle>
+                            <circle cx="200" cy="120" fill="#10b981" r="25"></circle>
+                            <circle cx="280" cy="120" fill="#f59e0b" r="25"></circle>
+                            <rect fill="#e5e7eb" height="60" rx="8" width="240" x="80" y="160"></rect>
+                            <text fill="#374151" font-size="16" font-weight="bold" text-anchor="middle" x="200"
+                                y="30">Equipe Colaborativa</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mb-20">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nossa Equipe</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center bg-white p-8 rounded-xl shadow-lg">
+                            <div
+                                class="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-2xl">AD</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Antonio David</h3>
+                            <p class="text-blue-600 mb-3">CEO &amp; Fundador</p>
+                            <p class="text-gray-600 text-sm">Especialista em infraestrutura de TI com mais de 15 anos de
+                                experiência em grandes corporações.</p>
+                        </div>
+                        <div class="text-center bg-white p-8 rounded-xl shadow-lg">
+                            <div
+                                class="w-24 h-24 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-2xl">JV</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">José Vinícius</h3>
+                            <p class="text-green-600 mb-3">CTO</p>
+                            <p class="text-gray-600 text-sm">Engenheiro de software com expertise em segurança digital e
+                                desenvolvimento de sistemas corporativos.</p>
+                        </div>
+                        <div class="text-center bg-white p-8 rounded-xl shadow-lg">
+                            <div
+                                class="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-2xl">RS</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Ruan dos Santos</h3>
+                            <p class="text-purple-600 mb-3">Gerente de Suporte</p>
+                            <p class="text-gray-600 text-sm">Responsável pela equipe de suporte técnico, garantindo
+                                atendimento de qualidade 24/7.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-12 text-center">
+                    <h2 class="text-3xl font-bold mb-6">Nossa Missão</h2>
+                    <p class="text-xl mb-8">Democratizar o acesso à tecnologia de ponta, oferecendo soluções
+                        personalizadas que impulsionam o crescimento e a eficiência dos nossos clientes.</p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Inovação</h3>
+                            <p>Sempre buscando as melhores tecnologias do mercado</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Qualidade</h3>
+                            <p>Excelência em todos os serviços prestados</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Confiança</h3>
+                            <p>Relacionamentos duradouros baseados na transparência</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Página de Contatos -->
+    <div class="hidden-page pt-24" id="contact-page">
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-4">Entre em Contato</h1>
+                <p class="text-xl text-center text-gray-600 mb-16">Estamos prontos para ajudar sua empresa</p>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Fale Conosco</h2>
+                        <form class="space-y-6" onsubmit="handleContactForm(event)">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nome Completo</label>
+                                <input
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Seu nome completo" required="" type="text" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">E-mail</label>
+                                <input
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="seu@email.com" required="" type="email" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
+                                <input
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="(83) 99999-9999" required="" type="tel" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                                <textarea
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    placeholder="Descreva como podemos ajudar sua empresa" required=""
+                                    rows="5"></textarea>
+                            </div>
+                            <button
+                                class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition duration-300"
+                                type="submit">
+                                
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Informações de Contato</h2>
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewbox="0 0 20 20">
+                                        <path
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Endereço</h3>
+                                    <p class="text-gray-600">Rua das Tecnologias, 123<br />Guarabira, PB</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewbox="0 0 20 20">
+                                        <path
+                                            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">Telefone</h3>
+                                    <p class="text-gray-600">(83) 3232-7890<br />(83) 99999-9999</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewbox="0 0 20 20">
+                                        <path
+                                            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">
+                                        </path>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-gray-800">E-mail</h3>
+                                    <p class="text-gray-600">
+                                        technetsolutionscontato@gmail.com<br />technetsolutionssuporte@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-100 rounded-2xl p-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4">📍 Nossa Localização</h3>
+                            <div class="bg-white rounded-lg p-4 border-2 border-dashed border-gray-300">
+                                <svg class="w-full h-48" fill="none" viewbox="0 0 400 200">
+                                    <!-- Map illustration -->
+                                    <rect fill="#f3f4f6" height="200" width="400"></rect>
+                                    <path d="M0 100 Q100 50 200 100 T400 100" fill="none" stroke="#3b82f6"
+                                        stroke-width="3"></path>
+                                    <path d="M50 150 L350 150" stroke="#6b7280" stroke-width="2"></path>
+                                    <path d="M100 50 L100 150" stroke="#6b7280" stroke-width="2"></path>
+                                    <path d="M300 50 L300 150" stroke="#6b7280" stroke-width="2"></path>
+                                    <circle cx="200" cy="100" fill="#ef4444" r="8"></circle>
+                                    <text fill="#374151" font-size="12" text-anchor="middle" x="200" y="130">TechNet
+                                        Solutions</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="hidden-page pt-24" id="testimonials-page">
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-4">Testemunhos</h1>
+                <p class="text-xl text-center text-gray-600 mb-16">O que nossos clientes dizem sobre nós</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">5.0</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"A TechNet Solutions transformou completamente nossa
+                            infraestrutura de TI. O suporte é excepcional e sempre disponível quando precisamos."</p>
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">AS</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Ana Silva</h4>
+                                <p class="text-sm text-gray-600">CEO, Empresa ABC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">5.0</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"Profissionais extremamente competentes. Resolveram todos os
+                            nossos problemas de rede e ainda implementaram melhorias que nem sabíamos que precisávamos."
+                        </p>
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">RC</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Roberto Costa</h4>
+                                <p class="text-sm text-gray-600">Diretor de TI, Tech Corp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">5.0</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"O atendimento é impecável. Sempre que temos algum problema, a
+                            equipe está pronta para ajudar. Recomendo sem hesitar!"</p>
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">MF</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Mariana Ferreira</h4>
+                                <p class="text-sm text-gray-600">Gerente, Inovação Ltda</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">5.0</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"Excelente custo-benefício. Os serviços são de alta qualidade e o
+                            preço é justo. Nossa produtividade aumentou significativamente."</p>
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">LS</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Lucas Santos</h4>
+                                <p class="text-sm text-gray-600">Proprietário, Comércio XYZ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">5.0</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"A migração para a nuvem foi perfeita. A equipe cuidou de tudo e
+                            não tivemos nenhuma interrupção no nosso trabalho."</p>
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">CF</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Carla Freitas</h4>
+                                <p class="text-sm text-gray-600">Sócia, Consultoria Pro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <span>⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-600">5.0</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">"Parceria de longa data. Sempre inovando e trazendo as melhores
+                            soluções para nossa empresa. Confiança total!"</p>
+                        <div class="flex items-center">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-r from-teal-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">DP</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Daniel Pereira</h4>
+                                <p class="text-sm text-gray-600">CTO, StartupTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-12 text-center">
+                    <h2 class="text-3xl font-bold mb-6">Estatísticas de Satisfação</h2>
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div>
+                            <div class="text-4xl font-bold mb-2">98%</div>
+                            <div class="text-lg">Satisfação Geral</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold mb-2">4.9</div>
+                            <div class="text-lg">Avaliação Média</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold mb-2">500+</div>
+                            <div class="text-lg">Clientes Atendidos</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold mb-2">95%</div>
+                            <div class="text-lg">Recomendação</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16 text-center">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8">Quer ser nosso próximo cliente satisfeito?</h2>
+                    <button
+                        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition duration-300"
+                        onclick="showPage('contact')">
+                        Entre em Contato
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Página FAQ -->
+    <div class="hidden-page pt-24" id="faq-page">
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-4">Perguntas Frequentes</h1>
+                <p class="text-xl text-center text-gray-600 mb-16">Encontre respostas para as dúvidas mais comuns</p>
+                <div class="space-y-6">
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <button
+                            class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl"
+                            onclick="toggleFAQ(1)">
+                            <span class="text-lg font-semibold text-gray-800">Qual é o tempo de resposta do suporte
+                                técnico?</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor"
+                                id="faq-icon-1" viewbox="0 0 20 20">
+                                <path
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden px-6 pb-4" id="faq-content-1">
+                            <p class="text-gray-600">Nosso suporte técnico está disponível 24/7 com tempo de resposta de
+                                até 2 horas para emergências e até 24 horas para solicitações não urgentes. Para
+                                clientes premium, garantimos resposta em até 1 hora.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <button
+                            class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl"
+                            onclick="toggleFAQ(2)">
+                            <span class="text-lg font-semibold text-gray-800">Vocês atendem empresas de que
+                                porte?</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor"
+                                id="faq-icon-2" viewbox="0 0 20 20">
+                                <path
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden px-6 pb-4" id="faq-content-2">
+                            <p class="text-gray-600">Atendemos empresas de todos os portes, desde pequenos escritórios
+                                com 5 funcionários até grandes corporações com mais de 1000 colaboradores. Nossos
+                                serviços são escaláveis e personalizados para cada necessidade.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <button
+                            class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl"
+                            onclick="toggleFAQ(3)">
+                            <span class="text-lg font-semibold text-gray-800">Como funciona o processo de
+                                instalação?</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor"
+                                id="faq-icon-3" viewbox="0 0 20 20">
+                                <path
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden px-6 pb-4" id="faq-content-3">
+                            <p class="text-gray-600">O processo inicia com uma visita técnica gratuita para avaliação
+                                das necessidades. Em seguida, elaboramos um projeto personalizado, agendamos a
+                                instalação em horário conveniente e fornecemos treinamento para sua equipe.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <button
+                            class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl"
+                            onclick="toggleFAQ(4)">
+                            <span class="text-lg font-semibold text-gray-800">Oferecem garantia nos serviços?</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor"
+                                id="faq-icon-4" viewbox="0 0 20 20">
+                                <path
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden px-6 pb-4" id="faq-content-4">
+                            <p class="text-gray-600">Sim! Oferecemos garantia de 12 meses para todos os serviços de
+                                instalação e configuração. Equipamentos possuem garantia do fabricante, e nossos
+                                serviços incluem manutenção preventiva gratuita no primeiro ano.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <button
+                            class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl"
+                            onclick="toggleFAQ(5)">
+                            <span class="text-lg font-semibold text-gray-800">É possível fazer um orçamento sem
+                                compromisso?</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor"
+                                id="faq-icon-5" viewbox="0 0 20 20">
+                                <path
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden px-6 pb-4" id="faq-content-5">
+                            <p class="text-gray-600">Claro! Oferecemos orçamentos gratuitos e sem compromisso. Nossa
+                                equipe fará uma avaliação completa das suas necessidades e apresentará a melhor solução
+                                dentro do seu orçamento.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <button
+                            class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl"
+                            onclick="toggleFAQ(6)">
+                            <span class="text-lg font-semibold text-gray-800">Vocês trabalham com quais marcas de
+                                equipamentos?</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor"
+                                id="faq-icon-6" viewbox="0 0 20 20">
+                                <path
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden px-6 pb-4" id="faq-content-6">
+                            <p class="text-gray-600">Trabalhamos com as principais marcas do mercado: Cisco, HP, Dell,
+                                Ubiquiti, Mikrotik, TP-Link, entre outras. Sempre recomendamos equipamentos que oferecem
+                                a melhor relação custo-benefício para cada projeto.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <button
+                            class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl"
+                            onclick="toggleFAQ(7)">
+                            <span class="text-lg font-semibold text-gray-800">Como posso agendar uma visita
+                                técnica?</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor"
+                                id="faq-icon-7" viewbox="0 0 20 20">
+                                <path
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden px-6 pb-4" id="faq-content-7">
+                            <p class="text-gray-600">Você pode agendar através do nosso formulário de contato, ligando
+                                para (83) 3232-7890 ou enviando um WhatsApp para (83) 99999-9999. Atendemos de segunda a
+                                sexta das 8h às 18h e sábados das 8h às 12h.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+                        <button
+                            class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-xl"
+                            onclick="toggleFAQ(8)">
+                            <span class="text-lg font-semibold text-gray-800">Vocês oferecem treinamento para a
+                                equipe?</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform" fill="currentColor"
+                                id="faq-icon-8" viewbox="0 0 20 20">
+                                <path
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div class="hidden px-6 pb-4" id="faq-content-8">
+                            <p class="text-gray-600">Sim! Incluímos treinamento básico para sua equipe em todos os
+                                projetos. Também oferecemos cursos avançados e workshops sobre segurança digital, uso de
+                                sistemas e melhores práticas em TI.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16 bg-gray-50 rounded-2xl p-8 text-center">
+                    <div class="mb-6">
+                        <svg class="w-16 h-16 text-blue-600 mx-auto" fill="currentColor" viewbox="0 0 20 20">
+                            <path
+                                d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Não encontrou sua resposta?</h2>
+                    <p class="text-gray-600 mb-6">Nossa equipe está pronta para esclarecer todas as suas dúvidas</p>
+                    <button
+                        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition duration-300"
+                        onclick="showPage('contact')">
+                        Entre em Contato
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-xl">T</span>
+                        </div>
+                        <span class="text-xl font-bold">TechNet Solutions</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Transformando empresas através da tecnologia.</p>
+                    <div class="flex space-x-4">
+                        <a class="text-gray-400 hover:text-white" href="#">📧</a>
+                        <a class="text-gray-400 hover:text-white" href="#">📱</a>
+                        <a class="text-gray-400 hover:text-white" href="#">💼</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Serviços</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a class="hover:text-white" href="#">Configuração de Redes</a></li>
+                        <li><a class="hover:text-white" href="#">Segurança Digital</a></li>
+                        <li><a class="hover:text-white" href="#">Suporte Técnico</a></li>
+                        <li><a class="hover:text-white" href="#">Servidores</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a class="hover:text-white" href="#" onclick="showPage('about')">Sobre Nós</a></li>
+                        <li><a class="hover:text-white" href="#" onclick="showPage('blog')">Blog</a></li>
+                        <li><a class="hover:text-white" href="#" onclick="showPage('testimonials')">Testemunhos</a></li>
+                        <li><a class="hover:text-white" href="#" onclick="showPage('faq')">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contato</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 Rua das Tecnologias, 123</li>
+                        <li>📞 (83) 3232-7890</li>
+                        <li>📧 contato@technetsolutions.com</li>
+                        <li>🕒 Seg-Sex: 8h-18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 TechNet Solutions. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
